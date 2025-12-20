@@ -1,0 +1,23 @@
+@model IEnumerable<Commande>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mes Commandes</h2>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Etat</th>
+        <th>Montant</th>
+    </tr>
+
+@foreach (var c in Model)
+{
+    <tr>
+        <td>@c.DateCommande</td>
+        <td>@c.Etat</td>
+        <td>@c.Montant FCFA</td>
+    </tr>
+}
+</table>

@@ -1,0 +1,12 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Statistiques du jour</h2>
+
+<ul>
+    <li>Commandes en cours : <strong>@ViewBag.EnCours</strong></li>
+    <li>Commandes validées : <strong>@ViewBag.Validees</strong></li>
+    <li>Commandes annulées : <strong>@ViewBag.Annulees</strong></li>
+    <li>Recettes journalières : <strong>@ViewBag.Recettes FCFA</strong></li>
+</ul>

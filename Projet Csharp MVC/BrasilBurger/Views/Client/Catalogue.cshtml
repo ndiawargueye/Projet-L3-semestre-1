@@ -1,0 +1,33 @@
+@model IEnumerable<dynamic>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Catalogue</h2>
+
+<a class="btn" href="/Client/Catalogue?type=burger">Burgers</a>
+<a class="btn" href="/Client/Catalogue?type=menu">Menus</a>
+
+<div class="container">
+@foreach (var item in Model)
+{
+    <div class="card">
+        <h3>@item.Nom</h3>
+        <img src="~/images/burgers/burger_classic.jpg" />
+        <p>Prix : @item.Prix FCFA</p>
+
+        <form method="post" action="/Commande/CommanderBurger">
+            <input type="hidden" name="burgerId" value="@item.Id" />
+
+            <select name="typeCommande">
+                <option value="Sur place">Sur place</option>
+                <option value="A récupérer">À récupérer</option>
+                <option value="A livrer">À livrer</option>
+            </select>
+
+            <br /><br />
+            <button class="btn">Commander</button>
+        </form>
+    </div>
+}
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Brasil Burger</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+
+<header>
+    <h1>🍔 Brasil Burger</h1>
+    <nav>
+        <a href="/Client/Catalogue">Catalogue</a>
+        <a href="/Client/Suivi">Mes Commandes</a>
+        <a href="/Gestionnaire/Commandes">Gestionnaire</a>
+        <a href="/Auth/Logout">Déconnexion</a>
+    </nav>
+</header>
+
+<div class="container">
+    @RenderBody()
+</div>
+
+<script src="~/js/script.js"></script>
+</body>
+</html>

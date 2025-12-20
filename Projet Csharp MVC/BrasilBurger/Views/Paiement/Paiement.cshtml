@@ -1,0 +1,23 @@
+@model Commande
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Paiement</h2>
+
+<p>Montant à payer : <strong>@Model.Montant FCFA</strong></p>
+
+<form method="post" action="/Paiement/Valider">
+    <input type="hidden" name="commandeId" value="@Model.Id" />
+
+    <label>
+        <input type="radio" name="moyen" value="Wave" required /> Wave
+    </label>
+    <br />
+    <label>
+        <input type="radio" name="moyen" value="OM" required /> Orange Money
+    </label>
+
+    <br /><br />
+    <button class="btn confirm-action">Payer</button>
+</form>

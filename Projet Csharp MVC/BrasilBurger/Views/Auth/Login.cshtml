@@ -1,0 +1,26 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h2>Connexion Client</h2>
+
+    <form method="post">
+        <input type="email" name="email" placeholder="Email" required /><br /><br />
+        <input type="password" name="motDePasse" placeholder="Mot de passe" required /><br /><br />
+        <button class="btn">Se connecter</button>
+    </form>
+
+    <p style="color:red">@ViewBag.Error</p>
+</div>
+
+</body>
+</html>
